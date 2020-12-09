@@ -1,0 +1,25 @@
+SELECT make_name, COUNT(model_name) AS total_for_sale 
+FROM usedcartestfinal 
+Group By make_name 
+Order By total_for_sale DESC 
+LIMIT 10;
+
+
+SELECT body_type, COUNT(make_name) AS total_body_type 
+FROM usedcartestfinal 
+Group By body_type 
+Order By total_body_type DESC 
+LIMIT 10;
+
+
+SELECT body_type, city, COUNT(body_type) AS total_for_body 
+FROM usedcartestfinal 
+Group By body_type, city 
+Order By total_for_body DESC 
+LIMIT 25;
+
+SELECT sp_id, sp_name, AVG(savings_amount) AS Average_Savings FROM usedcartestfinal
+GROUP BY sp_id, sp_name
+ORDER BY Average_Savings DESC
+LIMIT 1000;
+
