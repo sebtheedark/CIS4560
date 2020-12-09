@@ -1,1 +1,6 @@
-Download UsedCars database from Kaggle
+1 ssh kdelat15@129.150.64.74
+2 Upload thru scp
+3 unzip archive.zip
+4 hdfs dfs -mikdir usedcars
+5 hdfs dfs -put used_cars_data.csv usedcars/
+6 hdfs dfs -ls usedcars/
